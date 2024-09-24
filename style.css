@@ -1,0 +1,184 @@
+
+
+*{
+    margin: 0;     /*Altera a Margem "Gera espaço entre duas divisões ou elementos */
+    padding: 0;     /*Altera o Espaçamento de dentro da divisão ou tag "Espaçamento de dois textos, etc" */
+    box-sizing: border-box;
+}
+body{font-family: Arial, Helvetica, sans-serif;     /*Altera a fonte */
+    line-height: 1.6;     /*Espaçamento entre uma linha e outra */
+    background-color: f9f9f9;     /*Altera a cor de fundo de todo o Body  */
+
+}
+nav /* Alterar a navbar */{
+
+position: fixed;     /*Deixa a posição como fixa */
+top: 0%;     /*espaçamento apartir do topo 0 <- quer dizer que não vai ter espaçamento */
+width: 100%;  /*Libera a largura total da pagina  */
+background-color: #0000008c; /* Cria uma cor de fundo para a barra de navegação  */
+padding: 20px 0; /* espaçamento de 20 pixels verticalmente e 0 pixels horizontalmente (espaçamento dentro do elemento)  */
+
+}
+nav ul /* chama toda a lista dentro da barra da navegação */ {
+    list-style-type: none; /* remove o estilo da lista "os quadrados ao lado"  */
+    display: flex; /* deixa o elemento flexivel na mesma linha "se houver espaço ele poderá alterar" */
+    justify-content: center; /* Centraliza horizontalmente "só funciona com o display flex" */
+}
+
+nav ul li /* vai modificar todas as listas ao mesmo tempo */{
+margin: 0 20px;  /* Margem de 0 pixels verticalmente e 20 pixels horizontalmente */
+
+
+}
+nav ul li a /* esta chamando todos os links dentro da lista */ {
+
+color: #ffffff; /* Muda a cor do texto (fonte) */
+text-decoration: none; /* Remove a decoração do link (No caso a barra azul de quando se passa o mouse em cima) */
+font-size: 18px; /* Aumenta o tamanho do texto dentro da barra de navegação */
+padding: 10px; /* Espaçamento interno do link, isso fará aumentar o tamanho do botão de link, pois ele vai acabar criando um espaço
+que não existia */
+transition: color 0.3s; /*Ele pega a cor do elemento e transiciona com o Hover*/
+transition: font-size 0.6s ease, transform 0.6s ease;
+
+}
+/* É como se fosse um acionador, quando o mouse passa em cima com o transition altera a cor
+Hover = Acionador de quando o cursor passa em cima. */
+nav ul li a:hover{
+    color: #ff6347;
+    font-size: 25px;
+    text-decoration: underline;
+
+}
+section:not(#home){
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz a altura ficar do tamanho total da tela */
+    /*Pega todos os sections, exceto o home, assim conseguindo fazer uma modificação 
+    em todos os sections sem alterar o Home*/
+}
+#home {
+    /* background-color: #4A90E2; */
+    background-image: url(https://miro.medium.com/v2/resize:fit:1024/1*foSudq8U4On2zuEJOcKmjg.jpeg); /*Background imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000000;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Com o ID Flexivel, direciona em forma de coluna */
+    justify-content: center;
+    align-items: center; /* Alinha verticalmente */
+    font-size: 1.5em; /*em = vezes o elemento pai */
+    
+}
+.alvrd{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+padding: 15px;
+border-radius: 5px;
+
+}
+#home img{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  
+}
+.content{
+    display: flex;
+    flex-direction: row; /*? */
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.content img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.content .text{
+    max-width: 600;
+    text-align: left;
+
+}
+.content .text h2{
+    font-size: 2.3em;
+    margin-bottom: 20px;
+     color: #000000;
+    
+}
+.content .text p{
+    font-size: 1.4em;
+    color: #000000;
+}
+#security{
+    background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(29,131,253,1) 84%, rgba(69,252,188,1) 100%);
+}
+#lazer{
+
+    background: rgb(119,216,238);
+background: linear-gradient(90deg, rgba(119,216,238,1) 0%, rgba(29,41,253,1) 84%, rgba(69,252,188,1) 100%); 
+}
+#cliente{
+    background: rgb(58,157,180);
+    background: linear-gradient(90deg, rgba(58,157,180,1) 0%, rgba(29,41,253,1) 50%, rgba(252,69,69,1) 100%);
+}
+#transporte{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(29,180,253,1) 84%, rgba(139,69,252,1) 100%);
+}
+#mais a{
+
+text-decoration: none;
+
+
+}
+#mais{
+background: url('https://www.rbsdirect.com.br/imagesrc/25151951.jpg?format=webp&w=1200&h=675&a=c');
+background-size: cover;
+background-repeat: no-repeat;
+}
+.more{
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+padding: 15px;
+border-radius: 10px;
+    
+}
+.more h3{
+    padding: 20px;
+}
+
+.cta-button{
+    margin-top: 30px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 1s ease, transform 1s ease;
+    transition: font-size 0.6s ease, transform 0.6s ease;
+
+}
+.cta-button:hover{
+background-color: #ffa500;
+font-size: 1.2em ;
+
+}
+
